@@ -1,0 +1,150 @@
+<html>
+<style>
+.idiv{
+width:60%;
+margin:auto;
+background-color:#008a91;
+text-align:center;
+margin-top:2%;
+border-radius:10px;
+
+
+}
+body{
+font-family:segoe ui;
+background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(https://cdn.pixabay.com/photo/2017/04/30/15/12/apocalypse-2273069__340.jpg);
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+input{
+font-size:1.3em;
+width:80%;
+text-align:center;
+border-color: white;
+
+
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: olive;
+  opacity: 1; /* Firefox */
+}
+input placeholder{
+text-align:center;
+}
+button{
+outline:0;
+border:0;
+background-color:darkred;
+color:white;
+width:100px;
+height:40px;
+}
+button:hover{
+background-color:brown;
+border:solid 1px black;
+}
+select {
+font-size:1.3em;
+width:80%;
+text-align:center;
+    text-indent: 31%;
+     border: 2px solid balck;
+
+     color: #808000;
+    
+    }
+hr{
+border-top: 1px dashed black;
+}
+</style>
+<head>
+<title>-- CO2 Cars Emission Predictor -- </title>
+</head>
+<body>
+<div class='idiv'>
+
+<br/>
+<h1>CO2 Cars Emission Predictor</h1>
+<hr/>
+<br/>
+<form action="/predict" method="POST">
+<select  id="Make" name="Make" >
+    <option>Select the type of CAR</option>
+    <option value="9">FORD</option>
+    <option value="5">CHEVROLET</option>
+<option value="8">DODGE</option>
+    <option value="2">BMW</option>
+<option value="10">GMC</option>
+    <option value="31">TOYOTA</option>
+<option value="32">VOLKSWAGEN</option>
+    <option value="21">MERCEDES-BENZ</option>
+<option value="6">CHRYSLER</option>
+    <option value="1">AUDI</option>
+<option value="20">MAZDA</option>
+    <option value="33">VOLVO</option>
+<option value="22">NISSAN</option>
+    <option value="25">PONTIAC</option>
+<option value="27">SAAB</option>
+    <option value="28">SATURN</option>
+<option value="30">SUZUKI</option>
+    <option value="11">HONDA</option>
+<option value="29">SUBARU</option>
+    <option value="12">HYUNDAI</option>
+<option value="0">ACURA</option>
+    <option value="7">DAEWOO</option>
+<option value="15">JAGUAR</option>
+    <option value="17">KIA</option>
+  </select><br>
+<select id="Vehicle_Class" name="Vehicle_Class">
+<option value="">Select the Car Class</option>
+    <option value="0">COMPACT</option>
+    <option value="6">PICKUP TRUCK - STANDARD</option>
+<option value="10">SUV</option>
+    <option value="2">MID-SIZE</option>
+<option value="9">SUBCOMPACT</option>
+    <option value="11">TWO-SEATER</option>
+<option value="7">STATION WAGON - MID-SIZE</option>
+    <option value="1">FULL-SIZE</option>
+<option value="12">VAN - CARGO</option>
+    <option value="13">VAN - PASSENGER</option>
+<option value="3">MINICOMPACT</option>
+    <option value="4">MINIVAN</option>
+<option value="8">STATION WAGON - SMALL</option>
+    <option value="5">PICKUP TRUCK - SMALL</option>
+  </select><br>
+ <input class="form-input" type="text" name="Engine_Size" placeholder="Enter the engine size"><br>  
+<input class="form-input" type="text" name="Cylinders" placeholder="Enter the Cylinders size"><br>
+<select id="Transmission" name="Transmission">
+<option value="">Select transmission of the car</option>
+    <option value="0">Automatic</option>
+    <option value="3">Manual</option>
+<option value="1">Automatic with Select Shift</option>
+    <option value="2">Continuously Variable</option>
+  </select><br>
+<select id="Fuel_Type" name="Fuel_Type">
+<option value="">Select the Fuel Type</optio
+     <option value="4">Regular Gasoline</option>
+    <option value="3">Premium Gasoline</option>
+     <option value="0">Diesel</option>
+    <option value="1">Ethanol(E85)</option>
+     <option value="2">Natural Gas</option>
+  </select><br>
+<input class="form-input" type="text" name="Fuel_Consumption_City" 
+placeholder="Enter the Fuel Consumption City(L/100km)"><br>
+<input class="form-input" type="text" name="Fuel_Consumption_Hwy" 
+placeholder="Enter the Fuel Consumption Highway(L/100km)"><br>
+<input class="form-input" type="text" name="Fuel_Consumption_Comb(mpg)"
+ placeholder="Enter the Combine Fuel Consumption(mpg)"><br>
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+<br/>
+<br/>
+<br/>
+</div>
+
+</body>
+</html>
